@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Intelligent College Counseling System</title>
+    <!-- Load Inter font & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="dashboard-wrapper">
+        <aside class="sidebar">
+            <div class="brand">
+                <i class="fa-solid fa-leaf"></i>
+                <span>Intelligent College Counseling System</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="nav-item active"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+                <li><a href="#" class="nav-item"><i class="fa-regular fa-user"></i> Profile</a></li>
+                <li><a href="#" id="logoutBtn" class="nav-item logout"><i
+                            class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <header>
+                <h2>Welcome back, <span id="userNameDisplay">Student</span>!</h2>
+                <p>Here is your daily mental health overview.</p>
+            </header>
+
+            <section class="chat-cards-grid">
+                <div class="chat-card ai">
+                    <div class="chat-card-icon">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <div class="chat-card-info">
+                        <h3>Chat with AI</h3>
+                        <p>Start your conversation</p>
+                    </div>
+                </div>
+                <div class="chat-card counselor">
+                    <div class="chat-card-icon">
+                        <i class="fa-solid fa-user-doctor"></i>
+                    </div>
+                    <div class="chat-card-info">
+                        <h3>Chat with Counselor</h3>
+                        <p>Connect with a professional</p>
+                    </div>
+                </div>
+            </section>
+
+            <h3 class="section-title">Overall Mood Trend: Your Week in Review</h3>
+
+            <section class="analytics-grid">
+                <div class="chart-card">
+                    <div class="chart-wrapper">
+                        <canvas id="moodChart"></canvas>
+                    </div>
+                </div>
+                <div class="summary-cards-container">
+                    <div class="summary-card">
+                        <div class="summary-icon blue">
+                            <i class="fa-regular fa-face-smile"></i>
+                        </div>
+                        <div class="summary-info">
+                            <p>Average Mood</p>
+                            <h4>7.4 / 10</h4>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-icon orange">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                        </div>
+                        <div class="summary-info">
+                            <p>Stability</p>
+                            <h4>85%</h4>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-icon purple">
+                            <i class="fa-solid fa-wind"></i>
+                        </div>
+                        <div class="summary-info">
+                            <p>Main Emotion</p>
+                            <h4>Calm</h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <h3 class="section-title">Wellness Tools</h3>
+            <section class="wellness-grid">
+                <div class="wellness-card">
+                    <div class="wellness-card-header">
+                        <i class="fa-solid fa-pen"></i>
+                        <h3>THE JOURNAL</h3>
+                    </div>
+                    <h4 class="journal-title">Today's Journal Entry</h4>
+                    <p class="journal-excerpt">
+                        "Today I felt a little overwhelmed with my assignments, but after taking a short walk and
+                        organizing my tasks, I regained my focus. Remembering to take it one step at a time."
+                    </p>
+                    <div class="journal-date" id="journalDate">March 5th, 2026</div>
+                </div>
+
+                <div class="wellness-card">
+                    <div class="wellness-card-header">
+                        <i class="fa-solid fa-headphones"></i>
+                        <h3>MEDITATION</h3>
+                    </div>
+                    <h4 class="meditation-title">Listen & Find Calm</h4>
+                    <div class="audio-player">
+                        <button class="play-btn" id="playMeditateBtn"><i class="fa-solid fa-play"></i></button>
+                        <div class="progress-container">
+                            <div class="progress-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+                            <div class="time-info">
+                                <span>02:15</span>
+                                <span>10:00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
